@@ -1,6 +1,6 @@
 <!-- Document type: HTML | Version: 5 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
   <!-- METADATA -->
@@ -30,6 +30,14 @@
   <!-- Define website character encoding -->
   <meta charset="UTF-8">
 
+  <!-- Open Graph Advanced Metadata -->
+  <meta property="og:title" content="Pablo Fonseca | Professional Website" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pablofonseca-dev.github.io/professional-website/"/>
+  <meta property="og:image" content="https://screenshot.codepen.io/3256632.JjPpePe.5424c72c-57ed-4f75-ba0a-974d88f3e216.png"/>
+
+  <!-- Shortcut Icon -->
+  <link rel="shortcut icon" href="./Icons/favicon.ico"/>
   <!-- ADDITIONAL TOOLS -->
   <!-- Font Awesome Icons Library -->
   <script src="https://kit.fontawesome.com/cc171aa64b.js"></script>
@@ -264,12 +272,34 @@
     <section id="contact">
       <div class="container">
         <h3>Contact</h3>
-        <form action="form.php" metod="POST" enctype="multipart/form-data">
-          <input type="text" placeholder="Name" name="user_name"/>
-          <input type="text" placeholder="Email" name="user_email"/>
+        <form action="./Views/form.php" metod="POST" enctype="multipart/form-data">
+          <input type="text" placeholder="Name" name="user_name" required/>
+          <input type="text" placeholder="Email" name="user_email" required/>
           <textarea placeholder="Message" name="user_post"></textarea>
           <input type="submit" value="Send Data"/>
         </form>
+        <div class="contact_information">
+          <div class="mail_data">
+            <div class="email-icon-container">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+            <table>
+              <tr>
+                <td><span>pablo.fonsecam@outlook.com</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="whatsapp_data">
+            <div class="whatsapp-icon-container">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <table>
+              <tr>
+                <td><span>(+506)8762-0495</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </main>
