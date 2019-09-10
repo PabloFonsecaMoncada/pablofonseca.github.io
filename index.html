@@ -43,7 +43,11 @@
   <script src="https://kit.fontawesome.com/cc171aa64b.js"></script>
 
   <!-- Custom fonts [Links] | Google Fonts Library -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Quicksand:300,400,500,600,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">	
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="./Styles/professional-website-styles.css" type="text/css">
 
@@ -71,8 +75,8 @@
             <li><a href="#about-me">About me</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#my_projects">My projects</a></li>
-            <li><a href="">Why work with me?</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#work">Why work with me?</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -92,10 +96,6 @@
       <div class="box-container">
         <h3>About me</h3>
         <div class="aboutme-container">
-          <div class="personal-information-vector-graphic">
-            <!-- Scalable Vector Graphic (SVG) Edited with [Adobe Illustrator]  -->
-            <img src="./Multimedia/Pictures/computer_code_vector_graphic.svg" alt="Personal computer and code vector graphic" />
-          </div>
           <div class="personal-information-text">
             <p>
               My name's Pablo Fonseca and I live in Costa Rica with my family.<br /><br />
@@ -120,8 +120,13 @@
               Like I
               said another important skill of myself is design thinking. In every project, even in my life routine, I’m a perfectionist. I’m a follower of the philosophy of making a great functional and visual work.
             </p>
-
-            <a href="#">check my projects</a>
+          </div>
+          <div class="personal-information-link-container">
+            <a href="#" id="personal-information-link">check my certifications</a>
+          </div>
+          <div class="personal-information-vector-graphic">
+            <!-- Scalable Vector Graphic (SVG) Edited with [Adobe Illustrator]  -->
+            <!-- <img src="./Multimedia/Pictures/computer_code_vector_graphic.svg" alt="Personal computer and code vector graphic" /> -->
           </div>
         </div>
       </div>
@@ -173,35 +178,42 @@
         <div class="item">
           <div class="computer-container">
             <a href="https://codepen.io/pablofonseca/pen/qBWmyyy" target="_blank">
-              <img src="./Multimedia/Pictures/Computer_Design_Form.png" alt="" />
+              <img src="./Multimedia/Pictures/Computer_Design_Form.png" alt="Computer vector graphic representation" />
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="computer-container">
+            <a href="https://codepen.io/pablofonseca/pen/JjPpePe" target="_blank">
+              <img src="./Multimedia/Pictures/Computer_Design_Professional_Website.png" alt="Computer vector graphic representation">
             </a>
           </div>
         </div>
         <div class="item">
           <div class="computer-container">
             <a href="https://codepen.io/pablofonseca/pen/EqNGbO" target="_blank">
-              <img src="./Multimedia/Pictures/Computer_Design_Typo.png" alt="" />
+              <img src="./Multimedia/Pictures/Computer_Design_Typo.png" alt="Computer vector grahic representation" />
             </a>
           </div>
         </div>
         <div class="item">
           <div class="computer-container">
             <a href="https://codepen.io/pablofonseca/pen/LYPyrGN" target="_blank">
-              <img src="./Multimedia/Pictures/Computer_Design_Tribute_Page.png" alt="" />
+              <img src="./Multimedia/Pictures/Computer_Design_Tribute_Page.png" alt="Computer vector graphic representation" />
             </a>
           </div>
         </div>
         <div class="item">
           <div class="computer-container">
             <a href="https://codepen.io/pablofonseca/pen/qBWrpEz" target="_blank">
-              <img src="./Multimedia/Pictures/Computer_Design_Flexbox.png" alt="" />
+              <img src="./Multimedia/Pictures/Computer_Design_Flexbox.png" alt="Computer vector graphic representation" />
             </a>
           </div>
         </div>
         <div class="item">
           <div class="computer-container">
             <a href="https://codepen.io/pablofonseca/pen/PoYprog" target="_blank">
-              <img src="./Multimedia/Pictures/Computer_Design_Flexbox_FalconMasters.png" alt="" />
+              <img src="./Multimedia/Pictures/Computer_Design_Flexbox_FalconMasters.png" alt="Computer vector graphic representation" />
             </a>
           </div>
         </div>
@@ -236,7 +248,7 @@
                 </div>
               </li>
               <li>
-                <h4>Customer Support</h4>
+                <h4>Support</h4>
               </li>
               <li>
                 <p>
@@ -266,19 +278,25 @@
       </div>
     </section>
     <section id="chat">
-      <h3>What are you waiting to have your website?</h3>
+      <h3>What do you have in mind?</h3>
+      <img src="./Multimedia/Pictures/brain.png" alt="Brain Vector Graphic Picture" height="200" width="200"/style="margin: 0 auto;display: block;">
       <a href="">Lets Chat</a>
     </section>
     <section id="contact">
+      <?php
+      if(@$_GET['i']=='ok'){
+      ?>
+        <h3> Query sent </h3>
+      <?php } ?>
       <div class="container">
         <h3>Contact</h3>
         <form action="./Views/form.php" metod="POST" enctype="multipart/form-data">
-          <input type="text" placeholder="Name" name="user_name" required/>
+          <input type="text" placeholder="Full Name" name="user_name" required/>
           <input type="text" placeholder="Email" name="user_email" required/>
           <textarea placeholder="Message" name="user_post"></textarea>
           <input type="submit" value="Send Data"/>
         </form>
-        <div class="contact_information">
+        <div class="contact_information" id="contact">
           <div class="mail_data">
             <div class="email-icon-container">
               <i class="fas fa-paper-plane"></i>
@@ -303,6 +321,38 @@
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-networks-container">
+        <a href="https://www.facebook.com/pablofonsecam" target="_blank">
+          <!-- Facebook Social Network Icon -->
+          <div class="social-network-wrapper facebook">
+            <i class="fab fa-facebook-square"></i>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/pablo-fonseca-4440aa162/" target="_blank">
+          <!-- Linked-In Social Network Icon -->
+          <div class="social-network-wrapper linkedin">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://www.freecodecamp.org/pablofonseca" target="_blank">
+          <!-- FreeCodeCamp Learning Center Icon -->
+          <div class="social-network-wrapper freecodecamp">
+            <i class="fab fa-free-code-camp"></i>
+          </div>
+        </a>
+        <a href="https://github.com/pablofonseca-dev" target="_blank">
+          <!-- GitHub Social Network For Developers Icon -->
+          <div class="social-network-wrapper github">
+            <i class="fab fa-github-square"></i>
+          </div>
+        </a>
+      </div>
+      <div class="paragraph"></div>
+    </div>
+  </footer>
   <!-- Owl Carousel JS Library [JavaScript Files] -->
   <script src="./Styles/Owl/owl.carousel.min.js"></script>
 

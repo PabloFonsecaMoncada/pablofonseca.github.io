@@ -13,7 +13,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 1080px;
-  height: 100vh;
+  /* Bug found, height: 100vh */
+  /* height: 100vh;   */
+  height: 800px;
   /* 100% of viewport height */
 }
 
@@ -52,35 +54,55 @@ header #box-title-container>.title-container>hgroup>h1 {
   font-size: 5em;
   color: #EEEEEE;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 600;
+  /* Poppins Font Family */
 }
 
 header #box-title-container>.title-container>hgroup>h2 {
   font-size: 2.81em;
-  font-weight: 300;
+  font-weight: 200;
   color: #FFFFFF;
   text-align: center;
+  /* Poppins Font Family */
 }
 
 header #box-title-container>.title-container>a,
 #about-me a, #chat a, #contact input[type="submit"]{
   text-decoration: none;
   color: #FFF;
-  font-size: 1.12em;
+  font-size: 1em;
   background-color: #5cb8ff;
-  padding: 20px 25px;
+  padding: 20px 35px;
   text-transform: uppercase;
   text-align: center;
-  width: 340px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: "Raleway" !important;
   transition-property: all;
   transition-duration: .5s;
-  opacity: 0.9;
+  opacity: 0.8;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 0;
+}
+
+#about-me a{
+  background-color: #FF1754;
+}
+
+#about-me a:hover{
+  background-color: #EEE !important;
+  opacity: 0.5;
+  color: #FF1754 !important;
+}
+
+.personal-information-link-container{
+  display: flex;
+  justify-content: center;
+}
+
+header, section{
+  margin-bottom: 10%;
 }
 
 header #box-title-container>.title-container>a:hover,
@@ -127,43 +149,43 @@ header nav ul li a:hover {
 /* About Me Section */
 h3 {
   text-align: center;
-  font-size: 3.43em;
-  font-weight: normal;
-  font-family: "Poppins", sans-serif;
+  font-size: 4em;
   margin-top: 5%;
   margin-bottom: 5%;
   text-transform: capitalize;
   letter-spacing: 3px;
-  font-weight: 800;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+
+#about-me{
+  margin-bottom: 10%;
 }
 
 #about-me .aboutme-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
-#about-me .aboutme-container>.personal-information-vector-graphic>img {
-  min-width: 600px;
-  max-width: 1000px;
+/* #about-me .aboutme-container .personal-information-vector-graphic img {
+  width: 200px;
   height: auto;
-  /* border: 1px solid red; */
-}
+  border: 1px solid red;
+} */
 
-#about-me .aboutme-container>.personal-information-text {
+#about-me .aboutme-container>.personal-information-text:not(a){
   /* border: 1px solid blue; */
-  width: 42%;
-  font-family: "Poppins", sans-serif;
+  width: 80%;
   font-size: 1.5em;
   font-weight: 300;
-  color: #000000;
   line-height: 2;
-  font-weight: 500;
   text-align: justify;
   padding-left: 3em;
   border-left-color: #DDDDDD;
   border-left-style: solid;
   border-left-width: 1px;
+  margin: auto;
 }
 
 /* Services section */
@@ -176,25 +198,29 @@ h3 {
 #services .services-container .service {
   width: 30%;
   padding: 34px 30px 38px 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 40px;
   position: relative;
 }
 
-#services .services-container .service h4 {
-  font-size: 2em;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
+#services .services-container .service h4,
+.work-container > .item > ul > li > h4 {
   text-align: center;
-  font-weight: 800;
+  font-size: 2.3em;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: "Source Code Pro", sans-serif;
 }
 
 #services .services-container .service p {
   /* margin-bottom: 150px; */
   margin-top: 20px;
   line-height: 2;
-  height: 680px;
-  font-family: "Poppins", sans-serif;
+  /* height: 680px; */
+  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
 
@@ -209,14 +235,13 @@ h3 {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  top: 84%;
-  left: 70%;
   transition-property: all;
   transition-duration: .3s;
   -webkit-animation-name: big;
   animation-name: big;
+  position: relative;
+  z-index: 1000;
+  float: right;
 }
 
 .icon-container-white {
@@ -291,24 +316,16 @@ img.waves {
 }
 
 .work-container .item {
-  width: 28%;
+  width: 30%;
   text-align: center;
-  border: 1px solid #DDDDDD;
   padding: 2%;
-  border-radius: 10px;
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD;
 
 }
 
 .work-container .item ul {
   list-style-type: none;
-}
-
-.work-container>.item>ul>li>h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 3em;
-  font-weight: 300;
-  color: #000000;
-  margin-top: 10px;
 }
 
 .work-container>.item>ul>li>p {
@@ -318,22 +335,37 @@ img.waves {
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 500;
+  /* border: 1px solid blue; */
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 2;
+  text-align: justify;
+  padding-top: 4%;
 }
 
 /* Chat Section */
 #chat {
   background-image: linear-gradient(rgba(84, 93, 220, .94), rgba(96, 171, 245, .9));
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0;
   margin-top: 40px;
 }
 
 #chat h3{
-  font-size: 3em;
+  /* font-size: 3em;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  margin-bottom: 2% !important;
+  margin-bottom: 2% !important; */
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Contact Section */
@@ -347,14 +379,17 @@ img.waves {
 }
 
 .contact_information {
-  font-weight: 500;
-  font-size: 1.5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 5%;
-  font-family:"Poppins", sans-serif;
+  font-size: 1.5em;
+  /* margin-top: 2%;
+  margin-bottom: 2%; */
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: "Source Code Pro", sans-serif;
 }
 
 .contact_information td{
@@ -387,7 +422,7 @@ img.waves {
 }
 
 .whatsapp-icon-container{
-  background-color: #00e676;
+  background-color: #00E676;
   border: 1px solid #DDDDDD;
   height: 80px;
   width: 80px;
@@ -402,14 +437,73 @@ img.waves {
   font-size: 35px;
   color: #FFFFFF;
 }
+
+.social-networks-container{
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.social-network-wrapper{
+  position: relative;
+}
+.social-network-wrapper svg{
+  font-size: 60px;
+}
+
+.social-network-wrapper:not(.freecodecamp)::after{
+  height: 48px;
+  width: 44px;
+  background-color: #FFFFFF;
+  z-index: -1;
+  content: " ";
+  position:absolute;
+  left: 2px;
+  bottom: 5px;
+}
+
+footer{
+  position: relative;
+  z-index: 1000;
+}
+.facebook{
+  color: #3b5998;
+}
+
+.linkedin{
+  color: #0077b5;
+}
+
+.freecodecamp{
+  background-color: #006400;
+  color: #FFFFFF;
+  height: 55px;
+  border-radius: 3px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.freecodecamp svg{
+  font-size: 30px !important;
+}
+
+.github{
+  color: #000000;
+}
+
 input[type="text"], input[type="email"]{
   width: 49%;
   margin-bottom: 15px;
   padding: 18px 0;
   border: 0;
   border-bottom: 1px solid #5CB8FF;
-  font-size: 17px;
+  font-size: 1.5em;
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 textarea{
@@ -418,4 +512,13 @@ textarea{
   border-bottom: 1px solid #5cb8ff;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 2;
+}
+
+footer{
+  background-color: #2F2F2F;
+  padding: 40px 0;
+  margin-top: 5%;
 }
