@@ -5,7 +5,7 @@
 <head>
   <!-- METADATA -->
   <!-- Setting viewport to make the website look good on all electronic devices  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 
   <!-- [Microsoft Internet Explorer Version Edge Compatibility] -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -44,10 +44,8 @@
 
   <!-- Custom fonts [Links] | Google Fonts Library -->
   <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">	
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Source+Code+Pro&display=swap" rel="stylesheet">
+
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="./Styles/professional-website-styles.css" type="text/css">
 
@@ -63,6 +61,10 @@
 </head>
 
 <body>
+  <!-- WhatsApp Fixed Logotype -->
+  <div class="whatsapp-icon-container" id="fixed-icon">
+    <i class="fab fa-whatsapp"></i>
+  </div>
   <header>
     <div class="main">
       <div class="box-container">
@@ -278,7 +280,7 @@
       </div>
     </section>
     <section id="chat">
-      <h3>What do you have in mind?</h3>
+      <h3>What's on your mind?</h3>
       <img src="./Multimedia/Pictures/brain.png" alt="Brain Vector Graphic Picture" height="200" width="200"/style="margin: 0 auto;display: block;">
       <a href="">Lets Chat</a>
     </section>
@@ -345,7 +347,9 @@
           </div>
         </a>
       </div>
-      <div class="paragraph"></div>
+      <div class="paragraph">
+        <p>@ 2019 Pablo Fonseca | Web Designer Costa Rica. All rights reserved</p>
+      </div>
     </div>
   </footer>
   <!-- Owl Carousel JS Library [JavaScript Files] -->
@@ -381,6 +385,31 @@
         owl.trigger('prev.owl');
       }
       e.preventDefault();
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        scroll = $(window).scrollTop();
+        if(scroll > 100){
+          $(".main").css({"position":"fixed"});
+          $(".main").css({"width":"100%"});
+          $(".main").css({"top":"0"});
+          $(".main").css({"background":"#FFFFFF"});
+          $(".main a").css({"color":"#000000"});
+          $(".main #logo").css({"color":"#000000"});
+          $(".main").css({"padding-bottom":"20px"});
+          $(".main").css({"padding-top":"10px"});
+          $(".main").css({"z-index":"10000"});
+          $(".main").css({"box-shadow":"0px 3px 52px 0px rgba(0,0,0,0.3)"});
+        }else{
+          $(".main").css({"position":"relative"});
+          $(".main").css({"background":"transparent"});
+          $(".main").css({"box-shadow":"0 0 0"});
+          $(".main a").css({"color":"#FFFFFF"});
+          $(".main #logo").css({"color":"#FFFFFF"});
+        }
+      });
     });
   </script>
 </body>

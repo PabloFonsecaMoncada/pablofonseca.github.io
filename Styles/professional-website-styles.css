@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -17,6 +20,14 @@ header {
   /* height: 100vh;   */
   height: 800px;
   /* 100% of viewport height */
+}
+
+#fixed-icon{
+  position: fixed;
+  right: 2%;
+  bottom: 10%;
+  border: none;
+  z-index: 10000;
 }
 
 header .box-container {
@@ -105,6 +116,9 @@ header, section{
   margin-bottom: 10%;
 }
 
+section{
+  padding: 90px 0;
+}
 header #box-title-container>.title-container>a:hover,
 #about-me a:hover, #chat a:hover, #contact input[type="submit"]:hover{
   background-color: #FFFFFF;
@@ -406,7 +420,7 @@ img.waves {
 }
 .email-icon-container{
   background-color: #FFF;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #EEEEEE;
   height: 80px;
   width: 80px;
   display: flex;
@@ -423,7 +437,7 @@ img.waves {
 
 .whatsapp-icon-container{
   background-color: #00E676;
-  border: 1px solid #DDDDDD;
+  border: none;
   height: 80px;
   width: 80px;
   display: flex;
@@ -448,7 +462,14 @@ img.waves {
 
 .social-network-wrapper{
   position: relative;
+  transform: rotate(0);
+  transition: 0.5s;
 }
+
+.social-network-wrapper:hover{
+  transform: rotate(360deg);
+}
+
 .social-network-wrapper svg{
   font-size: 60px;
 }
@@ -521,4 +542,18 @@ footer{
   background-color: #2F2F2F;
   padding: 40px 0;
   margin-top: 5%;
+}
+
+footer .container{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .social-networks-container{
+  margin-bottom: 5%;
+}
+
+footer .paragraph > *{
+  text-align: center;
+  color: #FFFFFF;
 }
