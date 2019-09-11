@@ -12,14 +12,17 @@ input[type=email], input[type=password], input[type=text], input[type=number], i
   -o-appearance: none !important;
   appearance: none !important;
 }
+
 /* Disable default webkit button */
 input[type=text], input[type=button] {
- -webkit-appearance: none;
- -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -34,8 +37,40 @@ header {
   height: 800px;
   /* 100% of viewport height */
 }
+.popup-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-#fixed-icon{
+.visibility-functionality{
+  visibility:hidden;
+}
+.whatsapp-window-container{
+  display: flex;
+  height: 80vh;
+  width: 80%;
+  position:fixed;
+  margin-top: 120px;
+  /* background-color: black; */
+  z-index: 100000;
+  background-image: url("../Multimedia/Pictures/WhatsApp_Logo_2/WhatsApp_Logo_2.png");
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+.whatsapp-window-container span{
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#fixed-icon {
   position: fixed;
   right: 2%;
   bottom: 10%;
@@ -91,7 +126,7 @@ header #box-title-container>.title-container>hgroup>h2 {
 }
 
 header #box-title-container>.title-container>a,
-#about-me a, #chat a, #contact button, #submit a{
+#about-me a, #chat a, #contact button, #submit a {
   text-decoration: none;
   color: #FFF;
   font-size: 1em;
@@ -110,31 +145,32 @@ header #box-title-container>.title-container>a,
   border: 0;
 }
 
-#about-me a{
+#about-me a {
   background-color: #FF1754;
 }
 
-#about-me a:hover{
+#about-me a:hover {
   background-color: #EEE !important;
   opacity: 0.5;
   color: #FF1754 !important;
 }
 
-.personal-information-link-container{
+.personal-information-link-container {
   display: flex;
   justify-content: center;
 }
 
-header, section{
+header, section {
   margin-bottom: 10%;
 }
 
-section{
+section {
   padding: 90px 0;
 }
+
 header #box-title-container>.title-container>a:hover,
 #about-me a:hover, #chat a:hover, #contact input[type="submit"]:hover,
-button:hover, #submit a:hover{
+button:hover, #submit a:hover {
   background-color: #FFFFFF;
   color: #5CB8FF;
   opacity: 1;
@@ -186,7 +222,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-#about-me{
+#about-me {
   margin-bottom: 10%;
 }
 
@@ -201,8 +237,7 @@ h3 {
   height: auto;
   border: 1px solid red;
 } */
-
-#about-me .aboutme-container>.personal-information-text:not(a){
+#about-me .aboutme-container>.personal-information-text:not(a) {
   /* border: 1px solid blue; */
   width: 80%;
   font-size: 1.5em;
@@ -232,7 +267,7 @@ h3 {
 }
 
 #services .services-container .service h4,
-.work-container > .item > ul > li > h4 {
+.work-container>.item>ul>li>h4 {
   text-align: center;
   font-size: 2.3em;
   margin-top: 2%;
@@ -251,7 +286,6 @@ h3 {
   font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
-
 }
 
 .icon-container {
@@ -349,7 +383,6 @@ img.waves {
   padding: 2%;
   border-right: 1px solid #DDD;
   border-left: 1px solid #DDD;
-
 }
 
 .work-container .item ul {
@@ -379,7 +412,7 @@ img.waves {
   margin-top: 40px;
 }
 
-#chat h3{
+#chat h3 {
   /* font-size: 3em;
   color: #FFFFFF;
   font-family: "Poppins", sans-serif;
@@ -397,7 +430,7 @@ img.waves {
 }
 
 /* Contact Section */
-#contact form{
+#contact form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -420,19 +453,22 @@ img.waves {
   font-family: "Source Code Pro", sans-serif;
 }
 
-.contact_information td{
+.contact_information td {
   height: 70px;
   padding-left: 20px;
 }
-.contact_information td span{
+
+.contact_information td span {
   vertical-align: middle;
 }
+
 .contact_information>.mail_data,
-.contact_information>.whatsapp_data{
+.contact_information>.whatsapp_data {
   display: flex;
   flex-direction: row;
 }
-.email-icon-container{
+
+.email-icon-container {
   background-color: #FFF;
   border: 1px solid #EEEEEE;
   height: 80px;
@@ -444,12 +480,12 @@ img.waves {
   border-radius: 50%;
 }
 
-.email-icon-container svg{
+.email-icon-container svg {
   font-size: 35px;
   color: #6cbfff;
 }
 
-.whatsapp-icon-container{
+.whatsapp-icon-container {
   background-color: #00E676;
   border: none;
   height: 80px;
@@ -461,12 +497,12 @@ img.waves {
   border-radius: 50%;
 }
 
-.whatsapp-icon-container svg{
+.whatsapp-icon-container svg {
   font-size: 35px;
   color: #FFFFFF;
 }
 
-.social-networks-container{
+.social-networks-container {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
@@ -474,44 +510,45 @@ img.waves {
   justify-content: space-around;
 }
 
-.social-network-wrapper{
+.social-network-wrapper {
   position: relative;
   transform: rotate(0);
   transition: 0.5s;
 }
 
-.social-network-wrapper:hover{
+.social-network-wrapper:hover {
   transform: rotate(360deg);
 }
 
-.social-network-wrapper svg{
+.social-network-wrapper svg {
   font-size: 60px;
 }
 
-.social-network-wrapper:not(.freecodecamp)::after{
+.social-network-wrapper:not(.freecodecamp)::after {
   height: 48px;
   width: 44px;
   background-color: #FFFFFF;
   z-index: -1;
   content: " ";
-  position:absolute;
+  position: absolute;
   left: 2px;
   bottom: 5px;
 }
 
-footer{
+footer {
   position: relative;
   z-index: 1000;
 }
-.facebook{
+
+.facebook {
   color: #3b5998;
 }
 
-.linkedin{
+.linkedin {
   color: #0077b5;
 }
 
-.freecodecamp{
+.freecodecamp {
   background-color: #006400;
   color: #FFFFFF;
   height: 55px;
@@ -522,15 +559,15 @@ footer{
   align-items: center;
 }
 
-.freecodecamp svg{
+.freecodecamp svg {
   font-size: 30px !important;
 }
 
-.github{
+.github {
   color: #000000;
 }
 
-input[type="text"], input[type="email"]{
+input[type="text"], input[type="email"] {
   width: 49%;
   margin-bottom: 15px;
   padding: 18px 0;
@@ -543,7 +580,7 @@ input[type="text"], input[type="email"]{
   text-decoration: none;
 }
 
-textarea{
+textarea {
   padding: 18px 0;
   border: 0;
   border-bottom: 1px solid #5cb8ff;
@@ -554,44 +591,45 @@ textarea{
   line-height: 2;
 }
 
-footer{
+footer {
   background-color: #2F2F2F;
   padding: 40px 0;
   margin-top: 5%;
 }
 
-footer .container{
+footer .container {
   display: flex;
   flex-direction: column;
 }
 
-footer .social-networks-container{
+footer .social-networks-container {
   margin-bottom: 5%;
 }
 
-footer .paragraph > *{
+footer .paragraph>* {
   text-align: center;
   color: #FFFFFF;
 }
 
 /* Responsive design [desktop] */
-#fixed-bars{
+#fixed-bars {
   display: none;
   transition-duration: .4s;
   transform: rotate(0);
 }
 
-#fixed-bars:hover{
+#fixed-bars:hover {
   transform: rotate(360deg);
 }
 
-#pink{
+#pink {
   color: #ff1754;
   font-weight: 900;
 }
+
 /*Responsive design source code [mobile devices] */
-@media screen and (max-width: 700px){
-  #fixed-bars{
+@media screen and (max-width: 700px) {
+  #fixed-bars {
     display: block;
     position: fixed;
     z-index: 100000;
@@ -602,29 +640,31 @@ footer .paragraph > *{
     border-radius: 50%;
   }
 
-  header nav ul li a{
+  header nav ul li a {
     color: #FFFFFF !important;
   }
 
-  header #box-title-container>.title-container>hgroup>h1{
+  header #box-title-container>.title-container>hgroup>h1 {
     font-size: 4em;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 3px;
   }
 
-  header #box-title-container>.title-container>hgroup>h2{
+  header #box-title-container>.title-container>hgroup>h2 {
     font-size: 1.81em;
     padding-top: 20px;
-
   }
-  header .box-container #logo{
+
+  header .box-container #logo {
     padding-top: 20px;
   }
-  #fixed-bars>svg{
+
+  #fixed-bars>svg {
     font-size: 30px;
   }
-  header nav{
+
+  header nav {
     display: none;
     position: absolute;
     top: 83px;
@@ -633,29 +673,35 @@ footer .paragraph > *{
     background-color: #5CB8FF;
     width: 100%;
   }
-  header nav ul{
+
+  header nav ul {
     flex-direction: column;
   }
-  header nav ul li{
+
+  header nav ul li {
     margin-top: 10px;
     margin-bottom: 15px;
   }
-  #about-me .aboutme-container > .personal-information-text:not(a){
+
+  #about-me .aboutme-container>.personal-information-text:not(a) {
     width: 100%;
     padding-left: 0;
     padding: 20px;
   }
-  #services .services-container{
-    flex-direction: column;
-  }
-  #services .services-container .service{
-    width: 100%;
-  }
-  .work-container{
+
+  #services .services-container {
     flex-direction: column;
   }
 
-  .work-container .item{
+  #services .services-container .service {
+    width: 100%;
+  }
+
+  .work-container {
+    flex-direction: column;
+  }
+
+  .work-container .item {
     margin: 0 auto;
     width: 90%;
     padding-top: 10px;
@@ -663,55 +709,54 @@ footer .paragraph > *{
     margin-bottom: 30px;
   }
 
-  input[type="text"], input[type="email"]{
-    width:100%;
+  input[type="text"], input[type="email"] {
+    width: 100%;
   }
 
-  #fixed-icon{
+  #fixed-icon {
     display: none;
   }
 
-  h3{
+  h3 {
     padding-bottom: 63px;
     padding-top: 63px;
     font-size: 3em;
   }
 
-  section{
+  section {
     padding: 0;
   }
 
-  .work-container .item{
+  .work-container .item {
     margin-bottom: 50px;
   }
 
-  #about-me .aboutme-container > .personal-information-text:not(a){
+  #about-me .aboutme-container>.personal-information-text:not(a) {
     font-size: 1.3em;
   }
 
-  .contact_information > .mail_data, .contact_information > .whatsapp_data{
+  .contact_information>.mail_data, .contact_information>.whatsapp_data {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact_information td span{
+  .contact_information td span {
     font-size: 14px;
   }
 
-  .paragraph>p{
+  .paragraph>p {
     font-size: 14px;
   }
 }
 
 /*Responsive design source code [tablets] */
-@media screen and (min-width:701px){
-  @media screen and (max-width: 900px){
-
-    header{
+@media screen and (min-width:701px) {
+  @media screen and (max-width: 900px) {
+    header {
       height: 95vh;
     }
 
-    #fixed-bars{
+    #fixed-bars {
       display: block;
       position: fixed;
       z-index: 100000;
@@ -722,11 +767,11 @@ footer .paragraph > *{
       border-radius: 50%;
     }
 
-    #fixed-bars>svg{
+    #fixed-bars>svg {
       font-size: 30px;
     }
 
-    header nav{
+    header nav {
       display: none;
       position: absolute;
       top: 75px;
@@ -736,25 +781,30 @@ footer .paragraph > *{
       width: 100%;
     }
 
-    header nav ul{
+    header nav ul {
       flex-direction: column;
     }
-    header nav ul li{
+
+    header nav ul li {
       margin-top: 10px;
       margin-bottom: 15px;
     }
-    header nav ul li a{
+
+    header nav ul li a {
       color: #FFFFFF !important;
     }
-    #services .services-container .service{
+
+    #services .services-container .service {
       width: 45%;
     }
-    .work-container .item{
+
+    .work-container .item {
       width: 48%;
       margin-bottom: 30px;
       margin-top: 25px;
     }
-    #fixed-bars{
+
+    #fixed-bars {
       top: 10px;
     }
   }

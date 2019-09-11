@@ -64,6 +64,12 @@
 </head>
 
 <body>
+  <!-- WhatsApp Pop Up Window -->
+  <div class="popup-wrapper visibility-functionality">
+    <div class="whatsapp-window-container">
+      <span>(+506)8762-0495</span>
+    </div>
+  </div>
   <!-- WhatsApp Fixed Logotype -->
   <div class="whatsapp-icon-container" id="fixed-icon">
     <i class="fab fa-whatsapp"></i>
@@ -427,6 +433,10 @@
       });
       $('#fixed-bars').click(function(){
         $('header nav').slideToggle("fast");
+      });
+      $('.whatsapp-icon-container').click(function(){
+        $(".popup-wrapper").toggleClass("visibility-functionality");
+        $(".popup-wrapper").fadeToogle();
       });
     });
   </script>
