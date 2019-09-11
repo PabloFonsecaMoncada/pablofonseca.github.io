@@ -91,7 +91,7 @@ header #box-title-container>.title-container>hgroup>h2 {
 }
 
 header #box-title-container>.title-container>a,
-#about-me a, #chat a, #contact button{
+#about-me a, #chat a, #contact button, #submit a{
   text-decoration: none;
   color: #FFF;
   font-size: 1em;
@@ -134,7 +134,7 @@ section{
 }
 header #box-title-container>.title-container>a:hover,
 #about-me a:hover, #chat a:hover, #contact input[type="submit"]:hover,
-button:hover{
+button:hover, #submit a:hover{
   background-color: #FFFFFF;
   color: #5CB8FF;
   opacity: 1;
