@@ -12,7 +12,11 @@ input[type=email], input[type=password], input[type=text], input[type=number], i
   -o-appearance: none !important;
   appearance: none !important;
 }
-
+/* Disable default webkit button */
+input[type=text], input[type=button] {
+ -webkit-appearance: none;
+ -webkit-border-radius: 0;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -534,6 +538,8 @@ input[type="text"], input[type="email"]{
   font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  color: 0;
+  text-decoration: none;
 }
 
 textarea{
