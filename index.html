@@ -33,11 +33,11 @@
   <!-- Open Graph Advanced Metadata -->
   <meta property="og:title" content="Pablo Fonseca | Professional Website" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pablofonseca-dev.github.io/professional-website/"/>
-  <meta property="og:image" content="https://screenshot.codepen.io/3256632.JjPpePe.5424c72c-57ed-4f75-ba0a-974d88f3e216.png"/>
+  <meta property="og:url" content="https://pablofonseca-dev.github.io/professional-website/" />
+  <meta property="og:image" content="https://screenshot.codepen.io/3256632.JjPpePe.5424c72c-57ed-4f75-ba0a-974d88f3e216.png" />
 
   <!-- Shortcut Icon -->
-  <link rel="shortcut icon" href="./Icons/favicon.ico"/>
+  <link rel="shortcut icon" href="./Icons/favicon.ico" />
   <!-- ADDITIONAL TOOLS -->
   <!-- Font Awesome Icons Library -->
   <script src="https://kit.fontawesome.com/cc171aa64b.js"></script>
@@ -294,18 +294,18 @@
     </section>
     <section id="chat">
       <h3>What's on your mind?</h3>
-      <img src="./Multimedia/Pictures/brain.png" alt="Brain Vector Graphic Picture" height="200" width="200"/style="margin: 0 auto;display: block;">
+      <img src="./Multimedia/Pictures/brain.png" alt="Brain Vector Graphic Picture" height="200" width="200" style="margin: 0 auto;display: block;" />
       <a href="">Lets Chat</a>
     </section>
     <section id="contact">
       <div class="container">
         <h3>Contact</h3>
-        <form action="./Views/form.php" metod="POST" enctype="multipart/form-data">
-          <input type="text" placeholder="Full Name" name="user_name" required/>
-          <input type="text" placeholder="Email" name="user_email" required/>
+        <form action="https://formspree.io/pablo.fonsecam@outlook.com" method="POST" enctype="multipart/form-data">
+          <input type="text" placeholder="Full Name" name="user_name" required />
+          <input type="text" placeholder="Email" name="user_email" required />
           <textarea placeholder="Message" name="user_post"></textarea>
           <div id="submit">
-            <a type="submit">Submit</a>
+            <input type="submit" value="submit">
           </div>
         </form>
         <div class="contact_information" id="contact">
@@ -403,38 +403,74 @@
     });
   </script>
   <script>
-    $(document).ready(function(){
-      $(window).scroll(function(){
+    $(document).ready(function() {
+      $(window).scroll(function() {
         scroll = $(window).scrollTop();
-        if(scroll > 30){
-          $(".main").css({"position":"fixed"});
-          $(".main").css({"width":"100%"});
-          $(".main").css({"top":"0"});
-          $(".main").css({"background":"#FFFFFF"});
-          $(".main a").css({"color":"#000000"});
-          $(".main a").css({"font-weight": "bold"});
-          $(".main #logo").css({"color":"#000000"});
-          $(".main").css({"padding-bottom":"20px"});
-          $(".main").css({"padding-top":"10px"});
-          $(".main").css({"z-index":"10000"});
-          $(".main").css({"box-shadow":"0px 3px 52px 0px rgba(0,0,0,0.3)"});
-          $("#fixed-bars").css({"color": "#000000"});
+        if (scroll > 30) {
+          $(".main").css({
+            "position": "fixed"
+          });
+          $(".main").css({
+            "width": "100%"
+          });
+          $(".main").css({
+            "top": "0"
+          });
+          $(".main").css({
+            "background": "#FFFFFF"
+          });
+          $(".main a").css({
+            "color": "#000000"
+          });
+          $(".main a").css({
+            "font-weight": "bold"
+          });
+          $(".main #logo").css({
+            "color": "#000000"
+          });
+          $(".main").css({
+            "padding-bottom": "20px"
+          });
+          $(".main").css({
+            "padding-top": "10px"
+          });
+          $(".main").css({
+            "z-index": "10000"
+          });
+          $(".main").css({
+            "box-shadow": "0px 3px 52px 0px rgba(0,0,0,0.3)"
+          });
+          $("#fixed-bars").css({
+            "color": "#000000"
+          });
           $("#logo").html('<p><span id="pink">&lt;</span>portfolio<span id="pink">/&gt;</span></p>');
 
-        }else{
-          $(".main").css({"position":"relative"});
-          $(".main").css({"background":"transparent"});
-          $(".main").css({"box-shadow":"0 0 0"});
-          $(".main a").css({"color":"#FFFFFF"});
-          $(".main #logo").css({"color":"#FFFFFF"});
-          $("#fixed-bars").css({"color":"#FFFFFF"});
+        } else {
+          $(".main").css({
+            "position": "relative"
+          });
+          $(".main").css({
+            "background": "transparent"
+          });
+          $(".main").css({
+            "box-shadow": "0 0 0"
+          });
+          $(".main a").css({
+            "color": "#FFFFFF"
+          });
+          $(".main #logo").css({
+            "color": "#FFFFFF"
+          });
+          $("#fixed-bars").css({
+            "color": "#FFFFFF"
+          });
           $("#logo").html("<p>portfolio</p>");
         }
       });
-      $('#fixed-bars').click(function(){
+      $('#fixed-bars').click(function() {
         $('header nav').slideToggle("fast");
       });
-      $('.whatsapp-icon-container').click(function(){
+      $('.whatsapp-icon-container').click(function() {
         $(".popup-wrapper").toggleClass("visibility-functionality");
         $(".popup-wrapper").fadeToogle();
       });
