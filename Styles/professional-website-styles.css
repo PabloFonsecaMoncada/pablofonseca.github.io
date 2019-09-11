@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* Disable default browser styles */
+input[type=email], input[type=password], input[type=text], input[type=number], input[type=date], textarea, input[style*=appearance], span {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -ms-appearance: none !important;
+  -o-appearance: none !important;
+  appearance: none !important;
+}
+
 html{
   scroll-behavior: smooth;
 }
