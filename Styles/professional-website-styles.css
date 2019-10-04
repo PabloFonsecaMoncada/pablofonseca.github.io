@@ -15,12 +15,26 @@ input[type=number],
 input[type=date],
 textarea,
 input[style*=appearance],
-span {
+span,
+a {
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
     -ms-appearance: none !important;
     -o-appearance: none !important;
     appearance: none !important;
+}
+
+
+/* Atomic bomb here */
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 
