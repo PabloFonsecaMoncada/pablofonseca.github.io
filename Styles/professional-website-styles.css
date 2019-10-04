@@ -167,7 +167,7 @@ header #box-title-container>.title-container>hgroup>h2 {
 }
 
 header #box-title-container>.title-container>a,
-#about-me a,
+#about-me .personal-information-link-container a,
 #chat a,
 #contact button,
 #submit a,
@@ -190,10 +190,6 @@ input[type="submit"] {
     font-weight: 600;
     border-radius: 15px;
     border: 0;
-}
-
-#about-me a {
-    background-color: #FF1754;
 }
 
 #about-me a:hover {
@@ -222,6 +218,12 @@ input[type="submit"] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.professional-linkedin-badge-container {
+    margin-left: 135px !important;
+    display: flex !important;
+    flex-direction: row;
 }
 
 header,
@@ -337,6 +339,8 @@ h3 {
     border-left-style: solid;
     border-left-width: 1px;
     margin: auto;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 
@@ -586,8 +590,8 @@ img.waves {
     /* margin-top: 2%;
   margin-bottom: 2%; */
     letter-spacing: 3px;
-    font-weight: 500;
-    font-family: "Source Code Pro", sans-serif;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
 }
 
 .contact_information td {
