@@ -153,8 +153,8 @@ header #box-title-container {
 header #box-title-container>.title-container>hgroup>h1 {
     font-size: 5em;
     color: #EEEEEE;
-    text-transform: capitalize;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 100;
     /* Poppins Font Family */
 }
 
@@ -200,6 +200,19 @@ input[type="submit"] {
     background-color: #EEE !important;
     opacity: 0.5;
     color: #FF1754 !important;
+}
+
+#about-me .title-picture-wrapper img {
+    height: auto;
+    width: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .personal-information-link-container {
@@ -318,6 +331,7 @@ h3 {
     line-height: 2;
     text-align: justify;
     padding-left: 3em;
+    padding-top: 2em;
     border-left-color: #DDDDDD;
     border-left-style: solid;
     border-left-width: 1px;
