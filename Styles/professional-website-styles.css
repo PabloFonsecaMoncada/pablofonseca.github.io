@@ -45,7 +45,6 @@ input[type="submit"],
 input[type=text],
 input[type=button] {
     -webkit-appearance: none;
-    -webkit-border-radius: 0;
 }
 
 html {
@@ -156,7 +155,7 @@ header #box-title-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 18vh 0;
+    margin: 18vh auto;
     /* Overwrite Flex Props */
     -webkit-box-pack: center !important;
     -ms-flex-pack: center !important;
@@ -183,7 +182,7 @@ header #box-title-container>.title-container>hgroup>h2 {
 }
 
 header #box-title-container>.title-container>a,
-#about-me .personal-information-link-container a,
+.about-me .personal-information-link-container a,
 #chat a,
 #contact button,
 #submit a,
@@ -208,13 +207,13 @@ input[type="submit"] {
     border: 0;
 }
 
-#about-me a:hover {
+.about-me a:hover {
     background-color: #EEE !important;
     opacity: 0.5;
     color: #FF1754 !important;
 }
 
-#about-me .title-picture-wrapper img {
+.about-me .title-picture-wrapper img {
     height: auto;
     width: 300px;
     max-width: 100%;
@@ -252,7 +251,7 @@ section {
 }
 
 header #box-title-container>.title-container>a:hover,
-#about-me a:hover,
+.about-me a:hover,
 #chat a:hover,
 #contact input[type="submit"]:hover,
 button:hover,
@@ -319,11 +318,11 @@ h3 {
     font-family: "Montserrat", sans-serif;
 }
 
-#about-me {
+.about-me {
     margin-bottom: 10%;
 }
 
-#about-me .aboutme-container {
+.about-me .aboutme-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -336,13 +335,13 @@ h3 {
 }
 
 
-/* #about-me .aboutme-container .personal-information-vector-graphic img {
+/* .about-me .aboutme-container .personal-information-vector-graphic img {
   width: 200px;
   height: auto;
   border: 1px solid red;
 } */
 
-#about-me .aboutme-container>.personal-information-text:not(a) {
+.about-me .aboutme-container>.personal-information-text:not(a) {
     /* border: 1px solid blue; */
     width: 80%;
     font-size: 1.5em;
@@ -834,6 +833,37 @@ footer .paragraph>* {
     font-weight: 900;
 }
 
+.scientific_article{
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-align: center;
+    padding: 2rem;
+    margin: 2em 15rem;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.scientific_article>a{
+    text-decoration: none; 
+    font-size: 1.5rem;
+    color: #444;
+}
+
+.translator{
+    display:block;
+    margin: 0 auto;
+    width: 40rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+    border: 1px solid #ddd;
+}
 
 /*Responsive design source code [mobile devices] */
 
@@ -894,7 +924,7 @@ footer .paragraph>* {
         margin-top: 10px;
         margin-bottom: 15px;
     }
-    #about-me .aboutme-container>.personal-information-text:not(a) {
+    .about-me .aboutme-container>.personal-information-text:not(a) {
         width: 100%;
         padding-left: 0;
         padding: 20px;
@@ -939,7 +969,7 @@ footer .paragraph>* {
     .work-container .item {
         margin-bottom: 50px;
     }
-    #about-me .aboutme-container>.personal-information-text:not(a) {
+    .about-me .aboutme-container>.personal-information-text:not(a) {
         font-size: 1.3em;
     }
     .contact_information>.mail_data,
@@ -957,6 +987,9 @@ footer .paragraph>* {
     }
     .paragraph>p {
         font-size: 14px;
+    }
+    .scientific_article{
+        margin: 0;
     }
 }
 
