@@ -845,6 +845,14 @@ footer .paragraph>* {
     -o-border-radius: 30px;
 }
 
+#objetives, #experience{
+    padding: 0rem 6rem;
+    line-height: 3;
+}
+
+#experience ul{
+    padding-left: 2rem;
+}
 .scientific_article>a{
     text-decoration: none; 
     font-size: 1.5rem;
